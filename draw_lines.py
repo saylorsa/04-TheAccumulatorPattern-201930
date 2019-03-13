@@ -14,9 +14,9 @@ def main():
 
 def draw_lines(window,x1,y1,n):
     for k in range(n):
-        x2=x1+75
-        y2=y1+75
-        line=rg.Line(rg.Point(x1,y1),rg.Point(x2,y2-(k*(x2/n))))
+        x2=x1+100
+        y2=y1+100
+        line=rg.Line(rg.Point(x1,y1),rg.Point(x2,y2-(k*((y2-(y1-100))/(n+1)))))
         line.attach_to(window)
 
 main()
