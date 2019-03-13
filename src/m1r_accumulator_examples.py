@@ -10,7 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program, then READ its code.
 #     Then answer the following, GETTING HELP AS NEED!  (Ask questions!!!)
 #     Write your answers in any reasonable way (your choice).
@@ -50,11 +50,11 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #          of integers from r to s, inclusive, whose cosines are positive.
 #          It has at least 5 distinct errors (one per line).  What are they?
 #
-#              for k in range(r - s):
-#                  count = 0
-#                  if math.cos(r) > 0:
-#                      count = 1
-#                  return count
+#              for k in range(r - s):    Should be r, (s+1)
+#                  count = 0             Should be outside of loop
+#                  if math.cos(r) > 0:   Should be math.cos(k)
+#                      count = 1         Should be count = count + 1
+#                  return count          Should be outside of for loop
 #
 #     f. The code in the "graphics accumulation" example below includes:
 #            for _ in range(n):
@@ -86,7 +86,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #                  circle = rg.Circle(point, radius)
 #                  circle.attach_to(window)
 #                  x = x + (2 * radius)
-#
+# The second attempt is wrong because it adds an accumulation term at the end that is redundant
 ###############################################################################
 #   *** MAKE SURE YOU UNDERSTAND THE 3   ACCUMULATOR   PATTERNS    ***
 #   *** shown in this module:  SUMMING, COUNTING, and IN GRAPHICS  ***
