@@ -10,7 +10,7 @@ in another classic form:
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
          Aaron Wilkin, their colleagues, and Shane Saylor.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+import math
 
 # -----------------------------------------------------------------------------
 # Students: As you work each of these problems, ask yourself:
@@ -32,7 +32,7 @@ def main():
 def run_test_sum_more_cosines():
     """ Tests the   sum_more_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  sum_more_cosines  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     #
@@ -67,9 +67,27 @@ def run_test_sum_more_cosines():
         print('       actual:  ', answer)
 
     # -------------------------------------------------------------------------
-    # TODO: 2 (continued).
+    # DONE: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+
+    # Test 2:
+    expected = 1.19704  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(-7, -3)
+    print('Test 2 expected:', expected, '(approximately)')
+    if answer is not None:
+        print('       actual:  ', round(answer, 5))
+    else:
+        print('       actual:  ', answer)
+
+    # Test 3:
+    expected = -1.71573  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(4, 5)
+    print('Test 3 expected:', expected, '(approximately)')
+    if answer is not None:
+        print('       actual:  ', round(answer, 5))
+    else:
+        print('       actual:  ', answer)
 
 
 def sum_more_cosines(m, n):
@@ -87,7 +105,7 @@ def sum_more_cosines(m, n):
          which is approximately 0.02082.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -99,6 +117,11 @@ def sum_more_cosines(m, n):
     #   Reason: To ensure that you get more practice using expressions.
     # -------------------------------------------------------------------------
 
+    total=0
+    for k in range(m,n+1):
+        sine=math.sin(k)
+        total=total+sine
+    return total
 
 def run_test_count_sines_from():
     """ Tests the   count_sines_from   function. """
